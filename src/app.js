@@ -11,9 +11,9 @@ app.use(cors({
 
 
 app.use(express.json({limit: "20kb"})) //for form
-app.use(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({ extended: true })) //encode the url (insted if spaces it puts %20% and so on)
 app.use(express.static("public")) //keeps static assets in a public folder
-app.use(cookieParser())
+app.use(cookieParser()) //used for access and set cookies in users browser
 
 
 export {app}
