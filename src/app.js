@@ -16,4 +16,14 @@ app.use(express.static("public")) //keeps static assets in a public folder
 app.use(cookieParser()) //used for access and set cookies in users browser
 
 
+
+// import routers
+
+import userRouter from './routes/user.routes.js'
+
+
+//route declaration
+app.use("/api/v1/users" , userRouter)
+
+
 export {app}
